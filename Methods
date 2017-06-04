@@ -1,0 +1,47 @@
+
+class PrivateJet {
+	
+	String modelName;
+	int engineNum;
+	int maxPassengers;
+	int maxSpeed;
+	boolean forSale;
+	int unitsForSale;
+	
+	void jetDescription() {
+		
+		System.out.println("Hello!\nModel: " + modelName + "\nNumber of Engines: " + engineNum + "\nMax Passengers: " + maxPassengers + "\nMax Speed: " + maxSpeed);
+		
+	}
+	
+	void isAvailable() {
+		System.out.println("Exactly " + unitsForSale + " of model " + modelName + " are currently for sale.");
+	}
+	
+}
+
+public class Methods {
+
+	public static void main(String[] args) {
+		
+		PrivateJet privjet1 = new PrivateJet();
+		privjet1.modelName = "CX-100";
+		privjet1.engineNum = 2;
+		privjet1.maxPassengers = 12;
+		privjet1.maxSpeed = 466;
+		privjet1.forSale = (Math.random() < 0.5);
+		privjet1.jetDescription();
+		
+		if (privjet1.forSale == true) {
+			privjet1.unitsForSale = (int)(Math.random()*10 + 1);
+			privjet1.isAvailable();
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}
